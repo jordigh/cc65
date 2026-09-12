@@ -93,11 +93,13 @@ jobs:
         with:
           name: cc65-snapshot-win32
           path: cc65-snapshot-win32.zip
+          retention-days: 90
       - name: Upload a 64-bit Snapshot Zip
         uses: actions/upload-artifact@v4
         with:
           name: cc65-snapshot-win64
           path: cc65-snapshot-win64.zip
+          retention-days: 90
 
       - name: Get the online documents repo.
         uses: actions/checkout@v4
@@ -127,6 +129,7 @@ jobs:
         with:
           name: cc65-snapshot-docs
           path: cc65-snapshot-docs.zip
+          retention-days: 90
 
     # enter secrets under "repository secrets"
       - name: Upload 32-bit Windows snapshot to sourceforge
